@@ -1,0 +1,382 @@
+/*
+ * ARTIFACT MFG — DESIGN SYSTEM
+ * Design Movement: Architectural Editorial / Dark Prestige
+ *
+ * Color Philosophy:
+ * - Background: deep charcoal #111010
+ * - Text: warm cream #F0EDE8
+ * - Accent: muted gold #C9A96E (CTAs, hover states, logo rule)
+ * - Section alt: slightly lighter #1A1918
+ * - Muted text: #8A8480
+ *
+ * Typography:
+ * - Display: Cormorant Garamond (serif, italic for emotional headlines)
+ * - Subheadings: Montserrat SemiBold uppercase tracked
+ * - Body: Lato Regular 16px/1.75
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+}
+
+:root {
+  --radius: 0.125rem;
+  --background: oklch(0.12 0.004 60);
+  --foreground: oklch(0.94 0.008 70);
+  --card: oklch(0.15 0.004 60);
+  --card-foreground: oklch(0.94 0.008 70);
+  --popover: oklch(0.15 0.004 60);
+  --popover-foreground: oklch(0.94 0.008 70);
+  --primary: oklch(0.73 0.07 65);
+  --primary-foreground: oklch(0.12 0.004 60);
+  --secondary: oklch(0.18 0.004 60);
+  --secondary-foreground: oklch(0.94 0.008 70);
+  --muted: oklch(0.20 0.004 60);
+  --muted-foreground: oklch(0.60 0.012 65);
+  --accent: oklch(0.73 0.07 65);
+  --accent-foreground: oklch(0.12 0.004 60);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.73 0.07 65);
+  --gold: oklch(0.73 0.07 65);
+
+  /* Custom brand tokens */
+  --color-charcoal: #111010;
+  --color-charcoal-light: #1A1918;
+  --color-cream: #F0EDE8;
+  --color-gold: #C9A96E;
+  --color-muted-text: #8A8480;
+  --color-border-subtle: rgba(255,255,255,0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+    background-color: #111010;
+    color: #F0EDE8;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  a[href],
+  select:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      max-width: 1440px;
+    }
+  }
+
+  /* Gold accent rule */
+  .gold-rule {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background-color: #C9A96E;
+  }
+
+  /* Uppercase tracked label style */
+  .label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A96E;
+  }
+
+  /* Display headline */
+  .display-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.05;
+    color: #F0EDE8;
+  }
+
+  /* Section headline */
+  .section-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #F0EDE8;
+  }
+
+  /* Gold CTA button */
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border: 1px solid #C9A96E;
+    color: #C9A96E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-gold:hover {
+    background-color: #C9A96E;
+    color: #111010;
+  }
+
+  /* Ghost CTA button */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border: 1px solid rgba(240,237,232,0.3);
+    color: #F0EDE8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-ghost:hover {
+    border-color: #C9A96E;
+    color: #C9A96E;
+  }
+
+  /* Scroll reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── Shared mobile utilities ─── */
+
+  /* Responsive page padding — use on inner wrappers instead of hardcoded 4rem */
+  .page-x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (min-width: 769px) {
+    .page-x {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  /* Hero text overlay — bottom-pinned, responsive horizontal padding */
+  .hero-text-overlay {
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    padding: 0 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  @media (min-width: 769px) {
+    .hero-text-overlay {
+      bottom: 4rem;
+      padding: 0 4rem;
+    }
+  }
+
+  /* Two-column intro grid — collapses to single on mobile */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (min-width: 769px) {
+    .intro-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+
+  /* Two-column gallery grid — collapses on mobile */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  @media (min-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Products alternating grid — collapses on mobile */
+  .product-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    background-color: #0D0C0C;
+    overflow: hidden;
+  }
+  @media (min-width: 769px) {
+    .product-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* CTA banner — stacks on mobile */
+  .cta-banner {
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  @media (min-width: 769px) {
+    .cta-banner {
+      padding: 3rem 4rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  /* Nav mobile toggles */
+  @media (max-width: 768px) {
+    .hidden-mobile { display: none !important; }
+    .show-mobile { display: flex !important; }
+  }
+  @media (min-width: 769px) {
+    .show-mobile { display: none !important; }
+  }
+}
+
+/* ─── MOBILE RESPONSIVE FIXES ─── */
+@media (max-width: 768px) {
+
+  /* Fix nav overlap — ensure page content starts below the fixed header */
+  main > * > section:first-child,
+  main > section:first-child {
+    padding-top: 100px !important;
+  }
+
+  /* Collapse all two-column intro grids to single column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""],
+  [style*="gridTemplateColumns: \"repeat(2, 1fr)\""],
+  [style*='gridTemplateColumns: "1fr 1fr"'],
+  [style*='gridTemplateColumns: "repeat(2, 1fr)"'] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Reduce large padding on mobile */
+  [style*="padding: \"0 4rem\""],
+  [style*='padding: "0 4rem"'] {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Fix hero text overlay padding */
+  [style*="bottom: \"4rem\""] {
+    bottom: 1.5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Reduce font sizes for mobile */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+
+  /* Fix products page padding */
+  [style*="paddingTop: \"140px\""],
+  [style*="paddingTop: \"120px\""] {
+    padding-top: 100px !important;
+  }
+}
+
+/* ─── GALLERY CARD MOBILE FIXES ─── */
+@media (max-width: 768px) {
+  /* Hide description text in gallery cards on mobile — just show title and tag */
+  .gallery-card-desc {
+    display: none !important;
+  }
+
+  /* Make gallery card title smaller on mobile */
+  .gallery-card-title {
+    font-size: 1rem !important;
+  }
+
+  /* Stronger gradient on gallery cards for mobile readability */
+  .gallery-card-overlay {
+    background: linear-gradient(to top, rgba(17,16,16,0.97) 0%, rgba(17,16,16,0.5) 50%, rgba(17,16,16,0) 100%) !important;
+  }
+}
