@@ -55,11 +55,11 @@ export default function Home() {
     <div style={{ backgroundColor: "#111010" }}>
 
       {/* ─── HERO ─── */}
-      <section style={{ position: "relative", height: "100vh", minHeight: "600px", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: isMobile ? "60vh" : "100vh", minHeight: isMobile ? "400px" : "600px", overflow: "hidden" }}>
         <img
           src={HERO_IMG}
           alt="Custom concrete fireplace surround by Artifact Mfg"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% center" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
         />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(17,16,16,0.75) 0%, rgba(17,16,16,0.3) 60%, rgba(17,16,16,0.1) 100%)" }} />
