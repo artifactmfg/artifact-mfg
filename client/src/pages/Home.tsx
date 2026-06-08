@@ -299,7 +299,7 @@ export default function Home() {
 
       {/* ─── FINAL CTA ─── */}
       <section style={{ position: "relative", padding: "8rem 2rem", overflow: "hidden" }}>
-        <img src={COUNTER_IMG} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src={COUNTER_IMG} alt="Custom concrete countertop by Artifact Mfg — Springboro, Ohio" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(17,16,16,0.82)" }} />
         <RevealDiv style={{ position: "relative", zIndex: 2, maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
           <div className="label-text" style={{ marginBottom: "1.25rem" }}>Start the Conversation</div>
