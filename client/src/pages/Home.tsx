@@ -102,7 +102,7 @@ export default function Home() {
             }}>
               We cast concrete to be honest, durable, and alive — for countertops, sinks, fireplaces, furniture, and panels that hold your stories and stand the test of time.
             </p>
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", opacity: 0, animation: "fadeUp 0.9s 0.9s ease forwards" }}>
+            <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "3rem", opacity: 0, animation: "fadeUp 0.9s 0.9s ease forwards" }}>
               <Link href="/products">
                 <span className="btn-gold">View Our Portfolio</span>
               </Link>
