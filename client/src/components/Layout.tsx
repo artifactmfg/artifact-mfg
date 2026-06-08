@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <nav style={{ display: "flex", gap: "1.75rem", alignItems: "center" }} className="hidden-mobile">
+            {/* Desktop Nav — centered */}
+            <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "1.75rem", alignItems: "center" }} className="hidden-mobile">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span style={{
@@ -92,12 +92,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </span>
                 </Link>
               ))}
+            </div>
+
+            {/* Inquire — right */}
+            <div className="hidden-mobile" style={{ marginLeft: "auto" }}>
               <Link href="/contact">
                 <span className="btn-gold" style={{ padding: "0.6rem 1.5rem", fontSize: "0.72rem", backgroundColor: "#C9A96E", color: "#111010" }}>
                   Inquire
                 </span>
               </Link>
-            </nav>
+            </div>
 
             {/* Mobile hamburger */}
             <button
