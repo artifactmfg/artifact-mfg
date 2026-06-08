@@ -69,8 +69,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </Link>
 
-            {/* Desktop Nav — right-aligned, optically nudged right */}
-            <nav style={{ display: "flex", gap: "1.75rem", alignItems: "center", transform: "translateX(0.875rem)" }} className="hidden-mobile">
+            {/* Desktop Nav */}
+            <nav style={{ display: "flex", gap: "1.75rem", alignItems: "center" }} className="hidden-mobile">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span style={{
