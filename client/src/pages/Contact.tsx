@@ -86,7 +86,7 @@ export default function Contact() {
               </p>
 
               <div style={{ marginBottom: "2rem" }}>
-                <div className="label-text" style={{ marginBottom: "0.75rem" }}>Direct Contact</div>
+                <div className="label-text" style={{ marginBottom: "0.75rem" }}>Reach Jason directly</div>
                 <div style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "#8A8480", lineHeight: 2.2 }}>
                   <a href="mailto:jason@artifactmfg.us" style={{ color: "#C9A96E", textDecoration: "none", display: "block" }}>jason@artifactmfg.us</a>
                   <a href="tel:9372664123" style={{ color: "#8A8480", textDecoration: "none", display: "block" }}>937.266.4123</a>
