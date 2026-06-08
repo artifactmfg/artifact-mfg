@@ -85,16 +85,16 @@ export default function Home() {
         {/* Hero content */}
         <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 2rem 0 4rem", maxWidth: "1440px", margin: "0 auto" }}>
           <div style={{ maxWidth: "640px" }}>
-            <div className="label-text" style={{ marginBottom: "1.5rem", opacity: 0, animation: "fadeUp 0.8s 0.3s ease forwards" }}>
+            <div className="label-text" style={{ fontSize: isMobile ? "0.58rem" : undefined, letterSpacing: isMobile ? "0.14em" : undefined, marginBottom: isMobile ? "1.25rem" : "1.5rem", opacity: 0, animation: "fadeUp 0.8s 0.3s ease forwards" }}>
               Artisan Concrete · Springboro, Ohio
             </div>
 
             <p style={{
               fontFamily: "'Lato', sans-serif",
-              fontSize: "1rem",
+              fontSize: isMobile ? "0.86rem" : "1rem",
               fontWeight: 300,
               color: "rgba(240,237,232,0.75)",
-              lineHeight: 1.8,
+              lineHeight: isMobile ? 1.65 : 1.8,
               maxWidth: "420px",
               marginBottom: "2.5rem",
               opacity: 0,
