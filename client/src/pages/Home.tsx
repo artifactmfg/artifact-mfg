@@ -132,18 +132,18 @@ export default function Home() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "0.75rem" }}>
             {/* Homeowners card */}
-            <RevealDiv style={{ position: "relative", overflow: "hidden", minHeight: "480px" }}>
+            <RevealDiv style={{ position: "relative", overflow: "hidden", minHeight: isMobile ? "520px" : "480px" }}>
               <img src="/images/countertop-navy-kitchen_8be38a60.png" alt="Natural White kitchen with copper pendants" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }}
                 onMouseEnter={(e) => (e.target as HTMLElement).style.transform = "scale(1.04)"}
                 onMouseLeave={(e) => (e.target as HTMLElement).style.transform = "scale(1)"}
               />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(17,16,16,0.88) 40%, rgba(17,16,16,0.25) 100%)" }} />
-              <div style={{ position: "relative", zIndex: 2, padding: "3rem 2.5rem", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+              <div style={{ position: "relative", zIndex: 2, padding: isMobile ? "2rem 1.5rem" : "3rem 2.5rem", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
                 <div className="label-text" style={{ marginBottom: "0.75rem" }}>Homeowners & Designers</div>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "1.75rem", color: "#F0EDE8", marginBottom: "1rem", lineHeight: 1.2 }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: isMobile ? "1.45rem" : "1.75rem", color: "#F0EDE8", marginBottom: isMobile ? "1.25rem" : "1rem", lineHeight: 1.2 }}>
                   A Piece Made<br />Only for You
                 </h3>
-                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
+                <p style={{ display: isMobile ? "none" : "block", fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
                   Every casting carries the subtle fingerprints of the maker. Fully custom dimensions, finishes, and profiles — designed around your space and your life.
                 </p>
                 <Link href="/products">
@@ -153,18 +153,18 @@ export default function Home() {
             </RevealDiv>
 
             {/* Builders card */}
-            <RevealDiv style={{ position: "relative", overflow: "hidden", minHeight: "480px", transitionDelay: "0.15s" }}>
+            <RevealDiv style={{ position: "relative", overflow: "hidden", minHeight: isMobile ? "520px" : "480px", transitionDelay: "0.15s" }}>
               <img src="/images/fireplace-fluted-dark-enhanced_02f4ce55.png" alt="Dark fluted concrete fireplace surround" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s ease" }}
                 onMouseEnter={(e) => (e.target as HTMLElement).style.transform = "scale(1.04)"}
                 onMouseLeave={(e) => (e.target as HTMLElement).style.transform = "scale(1)"}
               />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(17,16,16,0.88) 40%, rgba(17,16,16,0.25) 100%)" }} />
-              <div style={{ position: "relative", zIndex: 2, padding: "3rem 2.5rem", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+              <div style={{ position: "relative", zIndex: 2, padding: isMobile ? "2rem 1.5rem" : "3rem 2.5rem", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
                 <div className="label-text" style={{ marginBottom: "0.75rem" }}>Builders & Developers</div>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "1.75rem", color: "#F0EDE8", marginBottom: "1rem", lineHeight: 1.2 }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: isMobile ? "1.45rem" : "1.75rem", color: "#F0EDE8", marginBottom: isMobile ? "1.25rem" : "1rem", lineHeight: 1.2 }}>
                   The Trace Collection
                 </h3>
-                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
+                <p style={{ display: isMobile ? "none" : "block", fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
                   Repeatable fireplace surrounds for developers, builders, and fireplace retailers — each piece still carrying the subtle variations that make concrete feel alive.
                 </p>
                 <Link href="/for-builders">
