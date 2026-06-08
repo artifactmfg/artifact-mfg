@@ -225,8 +225,8 @@
 
   /* Responsive page padding — use on inner wrappers instead of hardcoded 4rem */
   .page-x {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media (min-width: 769px) {
     .page-x {
@@ -378,5 +378,14 @@
   /* Stronger gradient on gallery cards for mobile readability */
   .gallery-card-overlay {
     background: linear-gradient(to top, rgba(17,16,16,0.97) 0%, rgba(17,16,16,0.5) 50%, rgba(17,16,16,0) 100%) !important;
+  }
+}
+
+/* ─── GALLERY CARD TEXT — MOBILE ─── */
+@media (max-width: 768px) {
+  /* Tighter padding on all sections */
+  section > div {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 }
