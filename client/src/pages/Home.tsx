@@ -45,7 +45,6 @@ function RevealDiv({ children, style, className }: { children: React.ReactNode; 
 const testimonials = [
   { quote: "We love them! Thank you Jason and Jenelle for making our vision a reality.", name: "Bryan Taulbee", title: "Co-owner, Broadway Barrel House — Franklin, OH" },
   { quote: "1400 lbs of concrete goodness made its way into our kitchen on this day. Many many thanks to Jason for creating this amazing piece of art.", name: "Christie Gronauer", title: "Designer & Home Owner" },
-  { quote: "We could not be happier with our concrete tops from Artifact Mfg. It was truly a pleasure working with Jason and Jenelle. Highly recommend!", name: "Satisfied Client", title: "" },
   { quote: "We have a personally-designed charcoal-colored sink for our vanity. The design was even better than we imagined. The sink is beautifully unique and superbly functional. Plus, with Artifact, the job is not 'complete' until the customer is completely satisfied.", name: "Fred Garber", title: "" },
 ];
 
@@ -59,7 +58,7 @@ export default function Home() {
         <img
           src={HERO_IMG}
           alt="Custom concrete fireplace surround by Artifact Mfg"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "55% center" : "center center" }}
         />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(17,16,16,0.75) 0%, rgba(17,16,16,0.3) 60%, rgba(17,16,16,0.1) 100%)" }} />
