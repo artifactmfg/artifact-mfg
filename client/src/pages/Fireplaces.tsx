@@ -176,7 +176,7 @@ export default function Fireplaces() {
 
       {/* Hero */}
       <section style={{ position: "relative", height: "80vh", minHeight: "560px", overflow: "hidden" }}>
-        <img src={HERO_IMG} alt="Dark fluted concrete fireplace surround" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center" }} />
+        <img src={HERO_IMG} alt="Dark fluted concrete fireplace surround" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(17,16,16,1) 0%, rgba(17,16,16,0.45) 55%, rgba(17,16,16,0.15) 100%)" }} />
         <div style={{ position: "absolute", bottom: "4rem", left: 0, right: 0, padding: "0 4rem", maxWidth: "1440px", margin: "0 auto" }}>
           <div className="label-text" style={{ marginBottom: "0.75rem" }}>Signature Work</div>
