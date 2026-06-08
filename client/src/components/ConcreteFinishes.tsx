@@ -6,6 +6,8 @@
  * to simulate real cast concrete aggregate and surface variation.
  */
 
+import { useIsMobile } from "@/hooks/useMobile";
+
 const COLORS = [
   {
     name: "Alabaster",
@@ -111,6 +113,7 @@ interface ConcreteFinishesProps {
 }
 
 export default function ConcreteFinishes({ heading = "Available Finishes", artisanImage, refinedImage }: ConcreteFinishesProps) {
+  const isMobile = useIsMobile();
   return (
     <section style={{ padding: "6rem 0", backgroundColor: "#111010" }}>
       <div dangerouslySetInnerHTML={{ __html: NOISE_FILTER }} />
@@ -124,7 +127,7 @@ export default function ConcreteFinishes({ heading = "Available Finishes", artis
             <h2 style={h2Style}>{heading}</h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(190px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(auto-fill, minmax(190px, 1fr))", gap: isMobile ? "1rem" : "1.5rem" }}>
             {COLORS.map((c) => (
               <div key={c.name}>
                 <div

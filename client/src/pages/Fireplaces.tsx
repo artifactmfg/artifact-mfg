@@ -244,7 +244,7 @@ export default function Fireplaces() {
                 <div style={{ position: "absolute", bottom: "2rem", left: "2.5rem", right: "2.5rem", maxWidth: "640px" }}>
                   <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#C9A96E", marginBottom: "0.5rem" }}>{projects[0].tag}</div>
                   <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(1.5rem, 3vw, 2.25rem)", color: "#F0EDE8", lineHeight: 1.15, marginBottom: "0.75rem" }}>{projects[0].title}</div>
-                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.7, maxWidth: "520px" }}>{projects[0].desc}</p>
+                  <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.85rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.7, maxWidth: "520px", display: isMobile ? "none" : "block" }}>{projects[0].desc}</p>
                 </div>
                 {/* Click hint */}
                 <div style={{ position: "absolute", top: "1.5rem", right: "1.5rem", display: "flex", alignItems: "center", gap: "0.4rem", background: "rgba(17,16,16,0.6)", padding: "0.35rem 0.75rem", backdropFilter: "blur(4px)" }}>
