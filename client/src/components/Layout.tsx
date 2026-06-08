@@ -54,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 2.5rem" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: isMobile ? "70px" : "96px", position: "relative" }}>
             {/* Logo */}
-            <Link href="/">
+            <Link href="/" onClick={() => { if (window.location.pathname === '/') { window.scrollTo({ top: 0, behavior: 'smooth' }); } }}>
               <div style={{ cursor: "pointer", flexShrink: 0 }}>
                 <img
                   src="/images/artifact-logo-cropped_d7aac9fb.png"
