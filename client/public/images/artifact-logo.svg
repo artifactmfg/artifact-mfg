@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  
+  <!-- ARTIFACT -->
+  <text x="200" y="44" 
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="42" font-weight="400" letter-spacing="10"
+    fill="#1a1816" text-anchor="middle">ARTIFACT</text>
+  
+  <!-- Left rule -->
+  <line x1="92" y1="60" x2="152" y2="60" stroke="#9a7d4a" stroke-width="0.75"/>
+  <!-- MFG -->
+  <text x="200" y="66"
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="14" font-weight="400" letter-spacing="6"
+    fill="#9a7d4a" text-anchor="middle">MFG</text>
+  <!-- Right rule -->
+  <line x1="248" y1="60" x2="308" y2="60" stroke="#9a7d4a" stroke-width="0.75"/>
+  
+  <!-- ARTISAN CONCRETE -->
+  <text x="200" y="90"
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="11" font-weight="400" letter-spacing="5"
+    fill="#1a1816" text-anchor="middle">ARTISAN CONCRETE</text>
+</svg>
