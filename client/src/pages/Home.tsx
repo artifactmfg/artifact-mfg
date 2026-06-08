@@ -43,9 +43,26 @@ function RevealDiv({ children, style, className }: { children: React.ReactNode; 
 }
 
 const testimonials = [
-  { quote: "We love them! Thank you Jason and Jenelle for making our vision a reality.", name: "Bryan Taulbee", title: "Co-owner, Broadway Barrel House — Franklin, OH" },
-  { quote: "1400 lbs of concrete goodness made its way into our kitchen on this day. Many many thanks to Jason for creating this amazing piece of art.", name: "Christie Gronauer", title: "Designer & Home Owner" },
-  { quote: "We have a personally-designed charcoal-colored sink for our vanity. The design was even better than we imagined. The sink is beautifully unique and superbly functional. Plus, with Artifact, the job is not 'complete' until the customer is completely satisfied.", name: "Fred Garber", title: "" },
+  {
+    quote: "Their concrete work is truly impeccable, and they consistently bring our vision to life with exceptional craftsmanship and attention to detail. The end result always exceeds expectations.",
+    name: "Madeline Bauman",
+    title: "Interior Designer · Dayton, OH"
+  },
+  {
+    quote: "We had a fantastic experience working with Jason and Jenelle on a bespoke concrete table top... Jason isn't just 'a guy who does concrete' — he's the person to create you something exceptional!",
+    name: "Kate Daley",
+    title: "Homeowner"
+  },
+  {
+    quote: "Working with Jason and Jenelle was an absolute pleasure! High-quality materials and craftsmanship... highly organized and met all projected timelines.",
+    name: "Patti Bearley",
+    title: "Homeowner"
+  },
+  {
+    quote: "We couldn't be happier with how they turned out... Everyone who has visited our new basement bar has commented on the stunning countertops.",
+    name: "Laura Phillips",
+    title: "Homeowner"
+  },
 ];
 
 export default function Home() {
