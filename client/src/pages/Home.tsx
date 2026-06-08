@@ -59,7 +59,7 @@ export default function Home() {
         <img
           src={HERO_IMG}
           alt="Custom concrete fireplace surround by Artifact Mfg"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% center" }}
         />
         {/* Dark overlay */}
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(17,16,16,0.75) 0%, rgba(17,16,16,0.3) 60%, rgba(17,16,16,0.1) 100%)" }} />
