@@ -3,6 +3,7 @@
  */
 import { useEffect, useRef, useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import { useForm } from '@formspree/react';
 
 // CloudFront image replaced with local asset
 const DETAIL_IMG = "/images/fireplace-stepped-surround-hearth-alabaster_08f18bd2.png";
@@ -22,6 +23,7 @@ function Reveal({ children, style, delay = 0 }: { children: React.ReactNode; sty
   const ref = useReveal();
   return <div ref={ref} className="reveal" style={{ transitionDelay: `${delay}s`, ...style }}>{children}</div>;
 }
+
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
@@ -49,13 +51,19 @@ const labelStyle: React.CSSProperties = {
 
 export default function Contact() {
   useSEO({ title: "Contact Artifact Mfg | Springboro, Ohio", description: "Start a conversation with Jason at Artifact Mfg. Custom concrete for your home or business. Serving Dayton, Cincinnati, and the tri-state area." });
+  const [formspreeState, formspreeSubmit] = useForm("meewgldj");
   const [form, setForm] = useState({ name: "", email: "", phone: "", projectType: "", message: "", isBuilder: false });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production this would POST to a backend or form service
-    setSubmitted(true);
+    await formspreeSubmit({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      projectType: form.projectType,
+      message: form.message,
+      isBuilder: form.isBuilder ? "Yes" : "No",
+    });
   };
 
   return (
@@ -116,7 +124,7 @@ export default function Contact() {
 
             {/* Right: form */}
             <Reveal delay={0.15}>
-              {submitted ? (
+              {formspreeState.succeeded ? (
                 <div style={{ padding: "4rem 3rem", border: "1px solid rgba(201,169,110,0.2)", textAlign: "center" }}>
                   <div style={{ width: "3rem", height: "1px", backgroundColor: "#C9A96E", margin: "0 auto 2rem" }} />
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "1.75rem", color: "#F0EDE8", marginBottom: "1rem" }}>Thank you.</h3>
@@ -124,7 +132,7 @@ export default function Contact() {
                     We've received your inquiry and will be in touch within one business day. We look forward to hearing about your project.
                   </p>
                   <div style={{ marginTop: "2rem", fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontSize: "1rem", color: "#C9A96E" }}>
-                    — Jason & Jenelle, Artifact Mfg.
+                    — Jason, Artifact Mfg.
                   </div>
                 </div>
               ) : (
@@ -132,7 +140,7 @@ export default function Contact() {
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.25rem" }}>
                     <div>
                       <label style={labelStyle}>Your Name *</label>
-                      <input required style={inputStyle} type="text" placeholder="Jane Smith" value={form.name}
+                      <input required style={inputStyle} type="text" name="name" placeholder="Jane Smith" value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
                         onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = "#C9A96E"}
                         onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = "rgba(255,255,255,0.1)"}
@@ -140,7 +148,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label style={labelStyle}>Email Address *</label>
-                      <input required style={inputStyle} type="email" placeholder="jane@example.com" value={form.email}
+                      <input required style={inputStyle} type="email" name="email" placeholder="jane@example.com" value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = "#C9A96E"}
                         onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = "rgba(255,255,255,0.1)"}
@@ -151,7 +159,7 @@ export default function Contact() {
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.25rem" }}>
                     <div>
                       <label style={labelStyle}>Phone Number</label>
-                      <input style={inputStyle} type="tel" placeholder="555.000.0000" value={form.phone}
+                      <input style={inputStyle} type="tel" name="phone" placeholder="555.000.0000" value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
                         onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = "#C9A96E"}
                         onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = "rgba(255,255,255,0.1)"}
@@ -159,7 +167,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label style={labelStyle}>Project Type</label>
-                      <select style={{ ...inputStyle, cursor: "pointer" }} value={form.projectType}
+                      <select style={{ ...inputStyle, cursor: "pointer" }} name="projectType" value={form.projectType}
                         onChange={(e) => setForm({ ...form, projectType: e.target.value })}
                         onFocus={(e) => (e.target as HTMLSelectElement).style.borderColor = "#C9A96E"}
                         onBlur={(e) => (e.target as HTMLSelectElement).style.borderColor = "rgba(255,255,255,0.1)"}
@@ -178,7 +186,7 @@ export default function Contact() {
 
                   <div>
                     <label style={labelStyle}>Tell Us About Your Project *</label>
-                    <textarea required style={{ ...inputStyle, minHeight: "140px", resize: "vertical" }} placeholder="Describe your project — dimensions, finish ideas, timeline, and any other details that would help us understand your vision." value={form.message}
+                    <textarea required style={{ ...inputStyle, minHeight: "140px", resize: "vertical" }} name="message" placeholder="Describe your project — dimensions, finish ideas, timeline, and any other details that would help us understand your vision." value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       onFocus={(e) => (e.target as HTMLTextAreaElement).style.borderColor = "#C9A96E"}
                       onBlur={(e) => (e.target as HTMLTextAreaElement).style.borderColor = "rgba(255,255,255,0.1)"}
@@ -192,9 +200,10 @@ export default function Contact() {
                     <span style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", color: "#8A8480" }}>I'm a builder, developer, or fireplace retailer interested in a volume program.</span>
                   </div>
 
+
                   <div style={{ paddingTop: "0.5rem" }}>
-                    <button type="submit" className="btn-gold" style={{ width: "100%", justifyContent: "center", padding: "1rem 2rem" }}>
-                      Send Inquiry
+                    <button type="submit" className="btn-gold" disabled={formspreeState.submitting} style={{ width: "100%", justifyContent: "center", padding: "1rem 2rem", opacity: formspreeState.submitting ? 0.65 : 1, cursor: formspreeState.submitting ? "wait" : "pointer" }}>
+                      {formspreeState.submitting ? "Sending..." : "Send Inquiry"}
                     </button>
                   </div>
                 </form>
