@@ -269,19 +269,19 @@ export default function Home() {
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section style={{ backgroundColor: "#0D0C0C", padding: "6rem 0" }}>
+      <section style={{ backgroundColor: "#0D0C0C", padding: isMobile ? "3rem 0" : "6rem 0" }}>
         <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 2rem" }}>
-          <RevealDiv style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <div className="label-text" style={{ marginBottom: "0.75rem" }}>Client Words</div>
+          <RevealDiv style={{ textAlign: "center", marginBottom: isMobile ? "1.5rem" : "4rem" }}>
+            <div className="label-text" style={{ marginBottom: "0.75rem" }}>WHAT OUR CLIENTS SAY</div>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)", color: "#F0EDE8" }}>
-              What Our Clients Say
+              The Work Speaks. So Do They.
             </h2>
           </RevealDiv>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", backgroundColor: "rgba(255,255,255,0.05)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: isMobile ? "0.5rem" : "1px", backgroundColor: "rgba(255,255,255,0.05)" }}>
             {testimonials.map((t, i) => (
               <RevealDiv key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div style={{ backgroundColor: "#111010", padding: "2.5rem 2rem", height: "100%" }}>
+                <div style={{ backgroundColor: "#111010", padding: isMobile ? "1.5rem 1.25rem" : "2.5rem 2rem", height: "100%" }}>
                   <div style={{ color: "#C9A96E", fontSize: "2rem", fontFamily: "'Cormorant Garamond', serif", lineHeight: 1, marginBottom: "1rem" }}>"</div>
                   <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "rgba(240,237,232,0.8)", lineHeight: 1.8, marginBottom: "1.5rem", fontStyle: "italic" }}>
                     {t.quote}
