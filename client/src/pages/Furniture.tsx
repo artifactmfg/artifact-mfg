@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
 import ConcreteFinishes from "@/components/ConcreteFinishes";
+import { useIsMobile } from "@/hooks/useMobile";
 
 const pieces = [
   {
@@ -85,31 +86,31 @@ const lbImages = pieces.map(p => ({ src: p.image, alt: p.alt, title: p.title, su
 
 type Piece = typeof pieces[number];
 
-function WideCard({ piece, lbIdx, onOpen }: { piece: Piece; lbIdx: number; onOpen: (i: number) => void }) {
+function WideCard({ piece, lbIdx, onOpen, isMobile }: { piece: Piece; lbIdx: number; onOpen: (i: number) => void; isMobile: boolean }) {
   return (
     <div onClick={() => onOpen(lbIdx)} className="group relative overflow-hidden" style={{ background: "#1a1a1a", cursor: "zoom-in" }}>
       <div className="aspect-[16/7] overflow-hidden">
         <img src={piece.image} alt={piece.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-8" style={{ background: "linear-gradient(to top, rgba(17,16,16,0.95) 0%, transparent 100%)" }}>
+      <div className="absolute bottom-0 left-0 right-0 p-8" style={{ background: "linear-gradient(to top, rgba(17,16,16,0.95) 0%, transparent 100%)", padding: isMobile ? "1.5rem" : "2rem" }}>
         <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: "#C9A84C", fontFamily: "Lato, sans-serif" }}>{piece.subtitle}</p>
-        <h2 className="text-3xl md:text-4xl font-light mb-3" style={{ fontFamily: "Cormorant Garamond, serif", color: "#F0EDE8" }}>{piece.title}</h2>
-        <p className="text-sm leading-relaxed max-w-2xl" style={{ fontFamily: "Lato, sans-serif", color: "rgba(240,237,232,0.65)" }}>{piece.description}</p>
+        <h2 className="text-3xl md:text-4xl font-light mb-3" style={{ fontFamily: "Cormorant Garamond, serif", color: "#F0EDE8", fontSize: isMobile ? "1.5rem" : undefined }}>{piece.title}</h2>
+        {!isMobile && <p className="text-sm leading-relaxed max-w-2xl" style={{ fontFamily: "Lato, sans-serif", color: "rgba(240,237,232,0.65)" }}>{piece.description}</p>}
       </div>
     </div>
   );
 }
 
-function NarrowCard({ piece, lbIdx, onOpen }: { piece: Piece; lbIdx: number; onOpen: (i: number) => void }) {
+function NarrowCard({ piece, lbIdx, onOpen, isMobile }: { piece: Piece; lbIdx: number; onOpen: (i: number) => void; isMobile: boolean }) {
   return (
     <div onClick={() => onOpen(lbIdx)} className="group relative overflow-hidden" style={{ background: "#1a1a1a", cursor: "zoom-in" }}>
       <div className="aspect-[4/3] overflow-hidden">
         <img src={piece.image} alt={piece.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
       </div>
-      <div className="p-6">
+      <div style={{ padding: isMobile ? "1rem" : "1.5rem" }}>
         <p className="text-xs tracking-[0.3em] uppercase mb-2" style={{ color: "#C9A84C", fontFamily: "Lato, sans-serif" }}>{piece.subtitle}</p>
-        <h2 className="text-2xl md:text-3xl font-light mb-3" style={{ fontFamily: "Cormorant Garamond, serif", color: "#F0EDE8" }}>{piece.title}</h2>
-        <p className="text-sm leading-relaxed" style={{ fontFamily: "Lato, sans-serif", color: "rgba(240,237,232,0.65)" }}>{piece.description}</p>
+        <h2 className="text-2xl md:text-3xl font-light mb-3" style={{ fontFamily: "Cormorant Garamond, serif", color: "#F0EDE8", fontSize: isMobile ? "1.1rem" : undefined }}>{piece.title}</h2>
+        {!isMobile && <p className="text-sm leading-relaxed" style={{ fontFamily: "Lato, sans-serif", color: "rgba(240,237,232,0.65)" }}>{piece.description}</p>}
       </div>
     </div>
   );
@@ -117,6 +118,7 @@ function NarrowCard({ piece, lbIdx, onOpen }: { piece: Piece; lbIdx: number; onO
 
 export default function Furniture() {
   const [lbIndex, setLbIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   // Build rows: wide pieces fill a full row; narrow pieces are paired into 2-col rows
   const rows: React.ReactNode[] = [];
@@ -126,7 +128,7 @@ export default function Furniture() {
     if (piece.wide) {
       rows.push(
         <div key={piece.id}>
-          <WideCard piece={piece} lbIdx={i} onOpen={setLbIndex} />
+          <WideCard piece={piece} lbIdx={i} onOpen={setLbIndex} isMobile={isMobile} />
         </div>
       );
       i += 1;
@@ -135,8 +137,8 @@ export default function Furniture() {
       const hasPair = next && !next.wide;
       rows.push(
         <div key={piece.id} className={`grid gap-6 ${hasPair ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-2"}`}>
-          <NarrowCard piece={piece} lbIdx={i} onOpen={setLbIndex} />
-          {hasPair && <NarrowCard piece={next} lbIdx={i + 1} onOpen={setLbIndex} />}
+          <NarrowCard piece={piece} lbIdx={i} onOpen={setLbIndex} isMobile={isMobile} />
+          {hasPair && <NarrowCard piece={next} lbIdx={i + 1} onOpen={setLbIndex} isMobile={isMobile} />}
         </div>
       );
       i += hasPair ? 2 : 1;

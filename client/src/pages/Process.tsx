@@ -127,7 +127,22 @@ export default function Process() {
               </Link>
             </Reveal>
             <Reveal delay={0.2}>
-              <img src={TEXTURE_IMG} alt="UHPC concrete surface texture detail" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover" }} />
+              <div style={{ backgroundColor: "#1A1918", padding: "2.5rem", border: "1px solid rgba(255,255,255,0.06)" }}>
+                <div className="label-text" style={{ marginBottom: "1rem" }}>Material Specs</div>
+                {[
+                  { label: "Compressive Strength", value: "15,000–30,000 PSI" },
+                  { label: "Flexural Strength", value: "2,000–5,000 PSI" },
+                  { label: "Water Absorption", value: "< 1% (sealed)" },
+                  { label: "Thickness", value: "¾\" – 1½\" standard" },
+                  { label: "Lead Time", value: "4–8 weeks typical" },
+                  { label: "Warranty", value: "Lifetime craftsmanship" },
+                ].map((spec) => (
+                  <div key={spec.label} style={{ display: "flex", justifyContent: "space-between", padding: "0.875rem 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                    <span style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", color: "#8A8480" }}>{spec.label}</span>
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", color: "#F0EDE8" }}>{spec.value}</span>
+                  </div>
+                ))}
+              </div>
             </Reveal>
           </div>
         </div>
