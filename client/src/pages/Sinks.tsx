@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
 import ConcreteFinishes from "@/components/ConcreteFinishes";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/sink-gucci-enhanced_73d9a9ab.png";
 const PINK_SINK_IMG = "/images/sink-pink-double-retro-v2_07881e18.png";
@@ -72,6 +73,7 @@ const projects = [
 const lbImages = projects.map(p => ({ src: p.img, alt: p.title, title: p.title, subtitle: p.tag }));
 
 export default function Sinks() {
+  useSEO({ title: "Concrete Sinks & Vanities | Artifact Mfg", description: "Hand-formed concrete sinks and vanity tops with character no factory can replicate. Custom dimensions, color, and form. Artifact Mfg, Springboro, Ohio." });
   const isMobile = useIsMobile();
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (

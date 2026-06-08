@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
 import ConcreteFinishes from "@/components/ConcreteFinishes";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/fireplace-concave-surround-raw_f7a66b5d.webp";
 const CONCAVE_SURROUND_IMG = "/images/fireplace-concave-surround-raw_f7a66b5d.webp";
@@ -161,6 +162,7 @@ const projects = [
 const lbImages = projects.map(p => ({ src: p.img, alt: p.title, title: p.title, subtitle: p.tag }));
 
 export default function Fireplaces() {
+  useSEO({ title: "Concrete Fireplace Surrounds & Hearths | Artifact Mfg", description: "Custom concrete fireplace surrounds, hearths, and mantles. Handcrafted in Springboro, Ohio. Serving Dayton, Cincinnati, and surrounding areas." });
   const isMobile = useIsMobile();
   const [lbIndex, setLbIndex] = useState<number | null>(null);
 

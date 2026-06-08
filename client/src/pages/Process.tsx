@@ -3,6 +3,7 @@
  */
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 // CloudFront images replaced with local assets
 const HERO_IMG = "/images/countertop-kitchen-island-v2_082db10b.png";
@@ -58,6 +59,7 @@ const steps = [
 ];
 
 export default function Process() {
+  useSEO({ title: "Our Process | Artifact Mfg", description: "From consultation to installation — how Artifact Mfg crafts custom concrete pieces. Handmade in Springboro, Ohio with care at every step." });
   return (
     <div style={{ backgroundColor: "#111010" }}>
       {/* Hero */}

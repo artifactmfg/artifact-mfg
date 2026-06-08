@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
 import ConcreteFinishes from "@/components/ConcreteFinishes";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/countertop-kitchen-island-v2_082db10b.png";
 const ALABASTER_ISLAND_IMG = "/images/countertop-alabaster-island-bowl-raw_61299c71.webp";
@@ -62,6 +63,7 @@ const projects = [
 const lbImages = projects.map(p => ({ src: p.img, alt: p.title, title: p.title, subtitle: p.tag }));
 
 export default function Countertops() {
+  useSEO({ title: "Concrete Countertops & Bar Tops | Artifact Mfg", description: "Custom concrete countertops and bar tops for kitchens, basement bars, and pool houses. Any color, any form. Handmade in Ohio by Artifact Mfg." });
   const isMobile = useIsMobile();
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (

@@ -4,6 +4,7 @@
 import { useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 // CloudFront images replaced with local assets
 const HERO_BG_IMG = "/images/fireplace-fluted-dark-enhanced_576c3595.png";
@@ -43,6 +44,7 @@ const advantages = [
 ];
 
 export default function ForBuilders() {
+  useSEO({ title: "Concrete for Builders & Developers | Artifact Mfg", description: "Repeatable concrete fireplace surrounds and architectural elements for builders and developers. The Trace Collection — consistent quality, natural variation. Artifact Mfg." });
   const isMobile = useIsMobile();
   return (
     <div style={{ backgroundColor: "#111010" }}>

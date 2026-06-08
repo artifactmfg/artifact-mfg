@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
 import ConcreteFinishes from "@/components/ConcreteFinishes";
 import { useIsMobile } from "@/hooks/useMobile";
+import { useSEO } from "@/hooks/useSEO";
 
 const pieces = [
   {
@@ -117,6 +118,7 @@ function NarrowCard({ piece, lbIdx, onOpen, isMobile }: { piece: Piece; lbIdx: n
 }
 
 export default function Furniture() {
+  useSEO({ title: "Concrete Furniture — Tables, Desks & More | Artifact Mfg", description: "Custom concrete dining tables, coffee tables, desks, and grill stations. Built top to base by Artifact Mfg in Springboro, Ohio." });
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   const isMobile = useIsMobile();
 

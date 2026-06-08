@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/bartop-commercial-raw_32573b4f.png";
 const ELM_STREET_IMG = "/images/commercial-elm-street-plaza-raw_71d6d535.png";
@@ -71,6 +72,7 @@ const projects = [
 const lbImages = projects.map(p => ({ src: p.img, alt: p.title, title: p.title, subtitle: p.tag }));
 
 export default function Commercial() {
+  useSEO({ title: "Commercial Concrete Bar Tops & Installations | Artifact Mfg", description: "Large-format concrete bar tops for restaurants, breweries, and hospitality. Durable, distinctive, and handcrafted. Artifact Mfg serves Dayton, Cincinnati, and beyond." });
   const isMobile = useIsMobile();
   const [lbIndex, setLbIndex] = useState<number | null>(null);
 

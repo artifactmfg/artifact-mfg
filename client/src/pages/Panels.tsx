@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import Lightbox from "@/components/Lightbox";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/wall-panels-angle2-enhanced_1fff9af1.png";
 const BATTLESHIP_IMG = "/images/fireplace-panel-final_c4803498.png";
@@ -47,6 +48,7 @@ const projects = [
 const lbImages = projects.map(p => ({ src: p.img, alt: p.title, title: p.title, subtitle: p.tag }));
 
 export default function Panels() {
+  useSEO({ title: "Concrete Wall & Shower Panels | Artifact Mfg", description: "Large-format concrete wall panels and shower panels for dramatic residential and commercial spaces. Custom color and scale. Artifact Mfg, Ohio." });
   const isMobile = useIsMobile();
   const [lbIndex, setLbIndex] = useState<number | null>(null);
   return (

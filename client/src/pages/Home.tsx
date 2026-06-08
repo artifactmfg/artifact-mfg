@@ -12,6 +12,7 @@
 import { useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 const HERO_IMG = "/images/fireplace-hero-v4_8c4f346b.png";
 const SINK_IMG = "/images/sink-gucci-enhanced_73d9a9ab.png";
@@ -66,6 +67,7 @@ const testimonials = [
 ];
 
 export default function Home() {
+  useSEO({ title: "Artifact Mfg — Artisan Concrete | Springboro, Ohio", description: "Handcrafted concrete countertops, fireplace surrounds, sinks, and furniture. Custom artisan concrete for homes and businesses in Dayton, Cincinnati, and the tri-state area." });
   const isMobile = useIsMobile();
   return (
     <div style={{ backgroundColor: "#111010" }}>

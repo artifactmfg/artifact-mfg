@@ -2,6 +2,7 @@
  * ARTIFACT MFG — The Concrete Manifesto
  */
 import { useEffect, useRef } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 // CloudFront texture replaced with a local concrete detail image
 const TEXTURE_IMG = "/images/fireplace-charcoal-fullheight-raw_a595fe3c.png";
@@ -23,6 +24,7 @@ function Reveal({ children, style, delay = 0 }: { children: React.ReactNode; sty
 }
 
 export default function Manifesto() {
+  useSEO({ title: "The Manifesto | Artifact Mfg", description: "Why we make what we make, the way we make it. The philosophy behind Artifact Mfg — artisan concrete rooted in honesty, durability, and craft." });
   return (
     <div style={{ backgroundColor: "#111010" }}>
       {/* Hero */}

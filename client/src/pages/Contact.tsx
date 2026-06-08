@@ -2,6 +2,7 @@
  * ARTIFACT MFG — Contact Page
  */
 import { useEffect, useRef, useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 // CloudFront image replaced with local asset
 const DETAIL_IMG = "/images/fireplace-stepped-surround-hearth-alabaster_08f18bd2.png";
@@ -47,6 +48,7 @@ const labelStyle: React.CSSProperties = {
 };
 
 export default function Contact() {
+  useSEO({ title: "Contact Artifact Mfg | Springboro, Ohio", description: "Start a conversation with Jason at Artifact Mfg. Custom concrete for your home or business. Serving Dayton, Cincinnati, and the tri-state area." });
   const [form, setForm] = useState({ name: "", email: "", phone: "", projectType: "", message: "", isBuilder: false });
   const [submitted, setSubmitted] = useState(false);
 

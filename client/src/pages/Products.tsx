@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 const SINK_GUCCI_IMG = "/images/sink-gucci-enhanced_73d9a9ab.png";
 const SINK_PINK_IMG = "/images/sink-pink-double-enhanced_eb432b6c.png";
@@ -36,6 +37,7 @@ const products = [
 ];
 
 export default function Products() {
+  useSEO({ title: "Artisan Concrete Products | Artifact Mfg", description: "Explore the full range of handcrafted concrete from Artifact Mfg — fireplaces, countertops, sinks, furniture, wall panels, and commercial bar tops." });
   const isMobile = useIsMobile();
   return (
     <div style={{ backgroundColor: "#111010" }}>
