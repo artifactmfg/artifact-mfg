@@ -122,7 +122,7 @@ export default function Process() {
                 We use Ultra-High Performance Concrete (UHPC) — a pre-blended mix that incorporates recycled industrial byproducts, reducing cement use and environmental impact. It is significantly stronger than standard concrete, with higher density and lower porosity.
               </p>
               <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "#8A8480", lineHeight: 1.85, marginBottom: "1.5rem" }}>
-                This means your piece holds heat longer, resists staining better, and requires less maintenance than traditional concrete. It can be pigmented to any color and finished to any texture — from polished to raw.
+                The result is concrete that feels refined without becoming fragile. It resists staining, supports cleaner lines and slimmer profiles, and gives us more control over color, texture, and finish. Each piece can be shaped around the space — from polished and architectural to raw and tactile.
               </p>
               <Link href="/contact">
                 <span className="btn-gold">Start Your Project</span>
