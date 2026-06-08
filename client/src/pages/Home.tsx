@@ -114,7 +114,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", opacity: 0, animation: "fadeUp 1s 1.2s ease forwards" }}>
+        <div className="scroll-indicator" style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", opacity: 0, animation: "fadeUp 1s 1.2s ease forwards" }}>
           <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480" }}>Scroll</span>
           <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, #C9A96E, transparent)" }} />
         </div>

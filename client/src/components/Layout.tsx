@@ -224,7 +224,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Contact column */}
             <div>
-              <div className="label-text" style={{ marginBottom: "1.25rem" }}>Get in Touch</div>
+              <div className="label-text" style={{ marginBottom: "1.25rem" }}>Reach Jason directly</div>
               <div style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", color: "#8A8480", lineHeight: 2 }}>
                 <a href="mailto:jason@artifactmfg.us" style={{ color: "#8A8480", textDecoration: "none", transition: "color 0.2s ease", display: "block" }}
                   onMouseEnter={(e) => (e.target as HTMLElement).style.color = "#C9A96E"}

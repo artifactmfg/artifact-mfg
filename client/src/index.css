@@ -381,11 +381,40 @@
   }
 }
 
-/* ─── GALLERY CARD TEXT — MOBILE ─── */
+/* ─── SECTION VERTICAL PADDING — MOBILE ─── */
 @media (max-width: 768px) {
   /* Tighter padding on all sections */
   section > div {
     padding-left: 0.75rem !important;
     padding-right: 0.75rem !important;
+  }
+
+  /* Reduce vertical section padding globally */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Tighten testimonial spacing */
+  [style*="padding: \"5rem"] {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Hide scroll indicator on mobile */
+  .scroll-indicator {
+    display: none !important;
+  }
+
+  /* Reduce gap between section heading and content */
+  [style*="marginBottom: \"4rem"],
+  [style*="marginBottom: \"5rem"],
+  [style*="marginBottom: \"6rem"] {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Footer label */
+  .footer-contact-label::before {
+    content: "Reach Jason directly";
   }
 }
