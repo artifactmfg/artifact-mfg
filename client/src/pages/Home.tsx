@@ -83,7 +83,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(17,16,16,0.75) 0%, rgba(17,16,16,0.3) 60%, rgba(17,16,16,0.1) 100%)" }} />
 
         {/* Hero content */}
-        <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: isMobile ? "flex-start" : "center", paddingTop: isMobile ? "6rem" : "0", padding: isMobile ? "6rem 1.25rem 0" : "0 2rem 0 4rem", maxWidth: "1440px", margin: "0 auto" }}>
+        <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: isMobile ? "flex-start" : "center", paddingTop: isMobile ? "6rem" : "0", padding: isMobile ? "6rem 1.25rem 0" : "0 2rem 0 8rem", maxWidth: "1440px", margin: "0 auto" }}>
           <div style={{ maxWidth: "640px" }}>
             <div className="label-text" style={{ fontSize: isMobile ? "0.58rem" : undefined, letterSpacing: isMobile ? "0.14em" : undefined, marginBottom: isMobile ? "1.25rem" : "1.5rem", opacity: 0, animation: "fadeUp 0.8s 0.3s ease forwards" }}>
               Artisan Concrete · Springboro, Ohio
