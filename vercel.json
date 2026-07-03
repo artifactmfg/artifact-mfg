@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/concrete-fireplace-hearth-mantle", "destination": "/fireplaces", "permanent": true },
+    { "source": "/concrete-sinks-vanities", "destination": "/sinks", "permanent": true },
+    { "source": "/our-small-business-story", "destination": "/manifesto", "permanent": true },
+    { "source": "/concrete-care-sheet", "destination": "/process", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
