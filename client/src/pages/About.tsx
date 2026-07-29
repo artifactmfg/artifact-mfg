@@ -26,11 +26,11 @@ export default function About() {
     <div style={{ backgroundColor: "#111010" }}>
 
       {/* Hero */}
-      <section style={{ position: "relative", height: "85vh", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
         <img
           src="/images/about-jason-jenelle.jpg"
           alt="Jason and Jenelle Robertson, founders of Artifact Mfg."
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 25%" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 15%" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(17,16,16,1) 0%, rgba(17,16,16,0.55) 60%, rgba(17,16,16,0.25) 100%)" }} />
         <div className="hero-text-overlay">
