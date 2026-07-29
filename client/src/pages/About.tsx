@@ -30,7 +30,7 @@ export default function About() {
         <img
           src="/images/about-jason-jenelle.jpg"
           alt="Jason and Jenelle Robertson, founders of Artifact Mfg."
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 15%" }}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(17,16,16,1) 0%, rgba(17,16,16,0.55) 60%, rgba(17,16,16,0.25) 100%)" }} />
         <div className="hero-text-overlay">
