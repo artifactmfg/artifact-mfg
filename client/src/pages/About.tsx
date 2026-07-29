@@ -9,11 +9,11 @@ export default function About() {
     <main className="bg-neutral-950 text-stone-100 min-h-screen">
 
       {/* Hero Photo */}
-      <div className="w-full h-[70vh] overflow-hidden">
+      <div className="w-full">
         <img
           src="/images/about-jason-jenelle.jpg"
           alt="Jason and Jenelle Robertson, founders of Artifact Mfg."
-          className="w-full h-full object-cover object-top"
+          className="w-full h-auto"
         />
       </div>
 
