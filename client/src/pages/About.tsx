@@ -2,6 +2,7 @@
  * ARTIFACT MFG — About Page
  */
 import { useEffect, useRef } from "react";
+import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
 
 function useReveal() {
@@ -46,6 +47,7 @@ export default function About() {
         <div style={{ maxWidth: "800px", margin: "0 auto" }} className="page-x">
 
           <Reveal>
+            <div className="label-text" style={{ marginBottom: "1.5rem" }}>The Story</div>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
               People occasionally ask how a philosophy professor ends up making concrete for a living.
             </p>
@@ -113,15 +115,29 @@ export default function About() {
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
               Artifact has grown far beyond what my wife, Jenelle, and I imagined when we started. While her career as a physical therapist keeps her busy, her encouragement, perspective, and willingness to believe this crazy idea might actually work have shaped the business from the beginning.
             </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
+            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "4rem" }}>
               At the end of the day, this isn't really a story about concrete.
             </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              It's about trying to do honest work, continuing to learn, and making things that deserve to outlast us.
-            </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "4rem" }}>
-              If that sounds like the kind of company you're looking for, we'd be glad to start a conversation.
-            </p>
+          </Reveal>
+
+          <Reveal>
+            <div style={{ borderTop: "1px solid rgba(201,169,110,0.2)", paddingTop: "3rem", textAlign: "center" }}>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)", color: "#F0EDE8", lineHeight: 2, marginBottom: "2rem" }}>
+                It's about trying to do honest work,<br />
+                continuing to learn,<br />
+                and making things that deserve to outlast us.
+              </div>
+              <div style={{ width: "3rem", height: "1px", backgroundColor: "#C9A96E", margin: "2rem auto" }} />
+              <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.875rem", color: "#8A8480", lineHeight: 1.8, marginBottom: "2.5rem" }}>
+                If that sounds like the kind of company you're looking for,<br />
+                we'd be glad to start a conversation.
+              </p>
+              <Link href="/contact">
+                <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C9A96E", borderBottom: "1px solid rgba(201,169,110,0.4)", paddingBottom: "0.25rem", cursor: "pointer" }}>
+                  Start a Conversation →
+                </span>
+              </Link>
+            </div>
           </Reveal>
 
         </div>
