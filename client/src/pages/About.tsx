@@ -81,7 +81,7 @@ export default function About() {
               We're perfectly comfortable saying that.
             </p>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "4rem" }}>
-              Other materials do some things better than concrete, and we'd rather lose a project than convince someone to choose the wrong material. But when concrete is the right choice, we think it offers something that's difficult to find anywhere else.
+              Other materials do some things better than concrete, and we'd rather lose a project than convince someone to choose the wrong material. But when concrete is the right choice, it offers a combination of honesty, texture, form, and permanence that's uniquely its own.
             </p>
           </Reveal>
 
