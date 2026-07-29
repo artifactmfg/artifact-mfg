@@ -13,7 +13,7 @@ export default function About() {
         <img
           src="/images/about-jason-jenelle.jpg"
           alt="Jason and Jenelle Robertson, founders of Artifact Mfg."
-          className="w-full h-full object-cover object-[center_60%]"
+          className="w-full h-full object-cover object-[center_25%]"
         />
       </div>
 
