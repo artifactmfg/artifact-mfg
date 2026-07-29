@@ -26,7 +26,7 @@ export default function About() {
     <div style={{ backgroundColor: "#111010" }}>
 
       {/* Hero */}
-      <section style={{ position: "relative", height: "60vh", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "85vh", overflow: "hidden" }}>
         <img
           src="/images/about-jason-jenelle.jpg"
           alt="Jason and Jenelle Robertson, founders of Artifact Mfg."
