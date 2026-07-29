@@ -12,6 +12,7 @@ import Commercial from "./pages/Commercial";
 import Panels from "./pages/Panels";
 import Products from "./pages/Products";
 import ForBuilders from "./pages/ForBuilders";
+import About from "./pages/About";
 import Process from "./pages/Process";
 import Manifesto from "./pages/Manifesto";
 import Contact from "./pages/Contact";
@@ -30,6 +31,7 @@ function Router() {
         <Route path="/panels" component={Panels} />
         <Route path="/products" component={Products} />
         <Route path="/for-builders" component={ForBuilders} />
+        <Route path="/about" component={About} />
         <Route path="/process" component={Process} />
         <Route path="/our-philosophy" component={Manifesto} />
         <Route path="/contact" component={Contact} />

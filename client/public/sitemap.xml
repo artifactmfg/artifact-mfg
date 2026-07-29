@@ -51,9 +51,14 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://www.artifactmfg.us/manifesto</loc>
+    <loc>https://www.artifactmfg.us/our-philosophy</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.artifactmfg.us/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.artifactmfg.us/contact</loc>
