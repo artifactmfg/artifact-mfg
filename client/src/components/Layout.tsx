@@ -15,7 +15,7 @@ const navLinks = [
   { label: "Products", href: "/products" },
   { label: "For Builders", href: "/for-builders" },
   { label: "Our Process", href: "/process" },
-  { label: "The Manifesto", href: "/manifesto" },
+  { label: "Our Philosophy", href: "/our-philosophy" },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -207,7 +207,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="label-text" style={{ marginBottom: "1.25rem" }}>Company</div>
               {[
                 { label: "Our Process", href: "/process" },
-                { label: "The Manifesto", href: "/manifesto" },
+                { label: "Our Philosophy", href: "/our-philosophy" },
                 { label: "For Builders & Developers", href: "/for-builders" },
                 { label: "Contact Us", href: "/contact" },
               ].map((item) => (

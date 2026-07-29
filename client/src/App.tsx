@@ -31,7 +31,7 @@ function Router() {
         <Route path="/products" component={Products} />
         <Route path="/for-builders" component={ForBuilders} />
         <Route path="/process" component={Process} />
-        <Route path="/manifesto" component={Manifesto} />
+        <Route path="/our-philosophy" component={Manifesto} />
         <Route path="/contact" component={Contact} />
         <Route path="/furniture" component={Furniture} />
         <Route path="/404" component={NotFound} />

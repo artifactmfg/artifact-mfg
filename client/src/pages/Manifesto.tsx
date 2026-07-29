@@ -24,7 +24,7 @@ function Reveal({ children, style, delay = 0 }: { children: React.ReactNode; sty
 }
 
 export default function Manifesto() {
-  useSEO({ title: "The Manifesto | Artifact Mfg", description: "Why we make what we make, the way we make it. The philosophy behind Artifact Mfg — artisan concrete rooted in honesty, durability, and craft." });
+  useSEO({ title: "Our Philosophy | Artifact Mfg.", description: "Why we work in concrete. The philosophy behind Artifact Mfg. and what drives Jason and Jenelle Robertson's approach to handcrafted work." });
   return (
     <div style={{ backgroundColor: "#111010" }}>
       {/* Hero */}
@@ -34,7 +34,7 @@ export default function Manifesto() {
         <div className="hero-text-overlay">
           <div className="label-text" style={{ marginBottom: "0.75rem" }}>Artifact Mfg.</div>
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(2.5rem, 6vw, 5rem)", color: "#F0EDE8", lineHeight: 1.0 }}>
-            The Concrete Manifesto
+            Our Philosophy
           </h1>
         </div>
       </section>

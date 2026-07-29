@@ -4,7 +4,8 @@
     { "source": "/concrete-sinks-vanities", "destination": "/sinks", "permanent": true },
     { "source": "/our-small-business-story", "destination": "/manifesto", "permanent": true },
     { "source": "/concrete-care-sheet", "destination": "/process", "permanent": true },
-    { "source": "/concrete-bars-countertops", "destination": "/countertops", "permanent": true }
+    { "source": "/concrete-bars-countertops", "destination": "/countertops", "permanent": true },
+    { "source": "/manifesto", "destination": "/our-philosophy", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
