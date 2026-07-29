@@ -45,7 +45,7 @@ export default function Manifesto() {
 
           {/* Preamble */}
           <Reveal>
-            <div className="label-text" style={{ marginBottom: "1.5rem" }}>Preamble: One Material, Many Spaces</div>
+            <div className="label-text" style={{ marginBottom: "1.5rem" }}>One Material, Many Spaces</div>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.05rem", color: "rgba(240,237,232,0.8)", lineHeight: 1.95, marginBottom: "1.5rem" }}>
               We craft concrete not just for surfaces, but for the daily rituals and quiet moments of living — where meals are prepared and shared, hands are washed, work is done, and people gather around warmth. Countertops, sinks, fireplaces, tables, and desks: these are the essential, lived-in elements of a home.
             </p>
