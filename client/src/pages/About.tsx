@@ -53,7 +53,7 @@ export default function About() {
               It's a fair question.
             </p>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              A few years ago, I left academia to start Artifact. Looking back, it probably wasn't the obvious career move, but it was the right one.
+              In 2019, I left academia to start Artifact. Looking back, it probably wasn't the obvious career move, but it was the right one.
             </p>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", color: "rgba(240,237,232,0.7)", lineHeight: 1.9, marginBottom: "1.5rem" }}>
               I wanted to build something.
